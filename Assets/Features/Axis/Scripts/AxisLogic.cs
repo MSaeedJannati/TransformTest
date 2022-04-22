@@ -58,6 +58,7 @@ namespace TransformTest
             size = Mathf.Clamp(size, -_model.maxDeltaPos, _model.maxDeltaPos);
             pos = size * _slopeUnit+_view.initPos;
             _view.SetPosition(pos);
+            EventController.TriggerEvent(EventController.OnAxisDrag,(_view.axis,size/_model.maxDeltaPos));
             
         }
 

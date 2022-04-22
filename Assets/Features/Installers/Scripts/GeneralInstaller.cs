@@ -14,6 +14,8 @@ namespace TransformTest.Installers
         void BindFactories()
         {
             Container.BindFactory<AxisView, InputHandler,AxisLogic, AxisLogic.Factory>();
+            Container.BindFactory<TweakingObjectView, InputHandler,TweakingObjectLogic, TweakingObjectLogic.Factory>();
+            Container.BindFactory<MainCanvasView,MainCanvasLogic, MainCanvasLogic.Factory>();
         }
     }
 }

@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: ModelsInstaller
   m_EditorClassIdentifier: 
   _axisModel: {fileID: 11400000, guid: a0850e6b3f1b503498fab73c99ffefd4, type: 2}
+  _tweakingObjectModel: {fileID: 11400000, guid: ef1c02ad3f1148e448d4887db89b9103,
+    type: 2}

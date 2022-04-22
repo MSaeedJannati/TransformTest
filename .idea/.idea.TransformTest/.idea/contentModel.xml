@@ -14,6 +14,9 @@
             </e>
           </e>
           <e p="General" t="Include">
+            <e p="EventController" t="Include">
+              <e p="EventController.cs" t="Include" />
+            </e>
             <e p="InputHandler" t="Include">
               <e p="Scripts" t="Include">
                 <e p="InputHandler.cs" t="Include" />
@@ -24,6 +27,17 @@
             <e p="Scripts" t="Include">
               <e p="GeneralInstaller.cs" t="Include" />
               <e p="ModelsInstaller.cs" t="Include" />
+            </e>
+          </e>
+          <e p="MainCanvas" t="Include">
+            <e p="MainCanvasLogic.cs" t="Include" />
+            <e p="MainCanvasView.cs" t="Include" />
+          </e>
+          <e p="TweakingObject" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="TweakingObjectLogic.cs" t="Include" />
+              <e p="TweakingObjectModel.cs" t="Include" />
+              <e p="TweakingObjectView.cs" t="Include" />
             </e>
           </e>
         </e>

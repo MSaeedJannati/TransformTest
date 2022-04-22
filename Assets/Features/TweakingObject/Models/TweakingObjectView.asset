@@ -9,14 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bb3585d32e95ec4d9555ca7de942ac0, type: 3}
-  m_Name: AxisModel
+  m_Script: {fileID: 11500000, guid: 23a5c8a2ade2de24e9ba22cc44385aaf, type: 3}
+  m_Name: TweakingObjectView
   m_EditorClassIdentifier: 
-  maxDeltaPos: 1.2
-  axisInfos:
-  - axis: 1
-    slope: {x: 1, y: 0}
-  - axis: 2
-    slope: {x: 0, y: 1}
-  - axis: 3
-    slope: {x: -1, y: -1}
+  rotSpeed: 1
+  scaleFactor: 0.2
+  minScale: 0.1
+  maxScale: 8

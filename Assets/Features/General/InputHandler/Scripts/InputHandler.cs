@@ -20,7 +20,7 @@ namespace TransformTest.General
 
         private Vector3 _currentPos;
         private Transform _transform;
-      [SerializeField]  private Camera _mainCamera;
+        [SerializeField] private Camera _camera;
 
         private float _timer = 0.0f;
         private bool _beingDragged;
@@ -33,6 +33,7 @@ namespace TransformTest.General
         public Action onDeselect;
         public Action onBeginDrag;
         public Action<Vector3> onDrag;
+        public Action<Vector2> onDragDelta;
 
         #endregion
 
@@ -41,8 +42,8 @@ namespace TransformTest.General
         private void Awake()
         {
             _transform = transform;
-            _mainCamera = Camera.main;
-
+            if (_camera == default)
+                _camera = Camera.main;
         }
 
         public void OnPointerClick(PointerEventData pointerEventData)
@@ -82,9 +83,9 @@ namespace TransformTest.General
             _currentPos = GetWorldPoint(eventData);
             _currentPos.z = _transform.position.z;
             onDrag?.Invoke(_currentPos);
+            onDragDelta?.Invoke(eventData.delta);
         }
 
-       
 
         public void OnPointerDown(PointerEventData eventData)
         {
@@ -137,7 +138,7 @@ namespace TransformTest.General
         {
             Vector3 pos = eventData.position;
             pos.z = 10;
-            return _mainCamera.ScreenToWorldPoint(pos);
+            return _camera.ScreenToWorldPoint(pos);
         }
 
         IEnumerator ScaleSelectCoroutine()
